@@ -1,0 +1,64 @@
+.landingpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('../../../assets/img/landingpage-bg.png') no-repeat center;
+    background-size: cover;
+}
+
+.junglebar-info {
+    color: var(--yellow);
+    width: 47%;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jungle-heading {
+    border-bottom: 5px solid; 
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); 
+    width: fit-content;
+}
+
+.special-offer {
+    background: url(../../../assets/svg/banner.svg);
+    background-size: cover;
+    text-decoration: none;
+    font-size: 30px;
+    min-width: 350px;
+    color: black;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.openhours {
+    margin-top: 15px;
+}
+
+.arrow-down {
+    width: 6%;
+    margin-top: auto;
+    margin-bottom: 3vh;
+
+    img {
+        width: 70px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.15);
+            cursor: pointer;
+        }
+    }
+}
+
+.navbar {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
