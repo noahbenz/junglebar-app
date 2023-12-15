@@ -25,7 +25,6 @@
             text-align: left;
             border-radius: 10px;
             color: var(--yellow);
-            
 
             h3 {
                 text-transform: uppercase;
@@ -46,10 +45,13 @@
                 box-sizing: border-box;
             }
 
-            button {
-                display: block;
-                margin: 15px auto 0 auto;
+            .button-container {
+                display: flex;
+                justify-content: space-between;
                 align-items: center;
+            }
+
+            button {
                 color: var(--yellow);
                 background-color: transparent;
                 border: none;
@@ -57,6 +59,24 @@
                 font-size: 30px;
                 width: fit-content;
                 border-bottom: 5px solid;
+                transition: 0.4s ease-out;
+                &:hover{
+                    transition: 0.4s ease;
+                    color: #796000;
+                    cursor: pointer;
+                    } 
+            }
+
+            a.register-link {
+                text-decoration: none;
+                color: var(--yellow);
+                font-size: 20px;
+                transition: 0.4s ease-out;
+                &:hover{
+                    transition: 0.4s ease;
+                    color: #796000;
+                    cursor: pointer;
+                    } 
             }
         }
     }
