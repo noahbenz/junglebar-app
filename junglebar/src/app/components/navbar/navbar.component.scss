@@ -14,8 +14,9 @@ nav {
       text-decoration: none;
       color: var(--yellow);
       font-size: 40px;
+      transition: 0.4s ease-out;
       &:hover{
-        transition: 0.4s;
+        transition: 0.4s ease;
         color: #796000;
         cursor: pointer;
         } 
