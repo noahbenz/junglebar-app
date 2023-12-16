@@ -12,7 +12,6 @@
 }
 
 h1 {
-    letter-spacing: 1.5px;
     font-size: 100px;
 }
 
@@ -21,6 +20,23 @@ h2 {
 }
 
 h3 {
-    letter-spacing: 1.5px;
     font-size: 40px;
+}
+
+@media (max-width: 1150px) {
+    h1 {
+        font-size: 70px;
+    }
+    
+    h2 {
+        font-size: 50px;
+    }
+    
+    h3 {
+        font-size: 35px;
+    }
+
+    nav a {
+        font-size: 30px !important;
+    }
 }
