@@ -13,8 +13,36 @@
         text-align: center;
 
         img {
-            max-width: 90%;
-            max-height: 90%;
+            height: 90vh;
+            width: 90vw;;
+        }
+
+        .ipad {
+            display: none;
+        }
+
+        .responsive {
+            display: none;
+        }
+
+        @media (max-width: 900px) {
+            .laptop {
+                display: none;
+            }
+
+            .ipad {
+                display: block;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .ipad {
+                display: none;
+            }
+
+            .responsive {
+                display: block;
+            }
         }
 
         .login-form {
@@ -49,6 +77,11 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
+                @media (max-width: 650px) {
+                    flex-direction: column; 
+                    align-items: flex-start;
+                }
             }
 
             button {
@@ -70,6 +103,7 @@
             a.register-link {
                 text-decoration: none;
                 color: black;
+                text-wrap: nowrap;
                 font-size: 20px;
                 transition: 0.4s ease-out;
                 &:hover{
@@ -77,6 +111,10 @@
                     color: #796000;
                     cursor: pointer;
                     } 
+
+                @media(max-width: 650px) {
+                    margin-top: 10px;
+                }
             }
         }
     }
