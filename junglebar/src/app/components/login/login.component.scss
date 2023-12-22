@@ -1,0 +1,82 @@
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('../../../assets/img/landingpage-bg.png') no-repeat center;
+    background-size: cover;
+    z-index: -1;
+
+    .login-banner {
+        position: relative;
+        text-align: center;
+
+        img {
+            max-width: 80%;
+        }
+
+        .login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: left;
+            border-radius: 10px;
+            color: var(--yellow);
+
+            h3 {
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 2px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            button {
+                color: var(--yellow);
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                font-size: 30px;
+                width: fit-content;
+                border-bottom: 5px solid;
+                transition: 0.4s ease-out;
+                &:hover{
+                    transition: 0.4s ease;
+                    color: #796000;
+                    cursor: pointer;
+                    } 
+            }
+
+            a.register-link {
+                text-decoration: none;
+                color: var(--yellow);
+                font-size: 20px;
+                transition: 0.4s ease-out;
+                &:hover{
+                    transition: 0.4s ease;
+                    color: #796000;
+                    cursor: pointer;
+                    } 
+            }
+        }
+    }
+}
