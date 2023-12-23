@@ -1,6 +1,7 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLinkActive, RouterModule } from '@angular/router';
+import AOS from 'aos';
 
 
 @Component({
@@ -11,6 +12,9 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
   styleUrl: './navbar-phone.component.scss'
 })
 export class NavbarPhoneComponent {
+  ngOnInit() {
+    AOS.init();
+  }
   isMenuOpen: boolean = false;
   iconSrc: string = 'assets/svg/burger-icon.svg'
 
