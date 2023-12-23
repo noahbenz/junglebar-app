@@ -6,6 +6,15 @@
     width: 100%;
     background: url('../../../assets/img/landingpage-bg.png') no-repeat center;
     background-size: cover;
+    .navbar {
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .navbar-phone{
+        display: none;
+    }
     @media (max-width: 900px) {
         flex-direction: column;
         text-align: center;
@@ -26,6 +35,10 @@
 
         .navbar {
             display: none;
+        }
+        .navbar-phone{
+            display: block;
+            justify-content: flex-end;
         }
     }
 }
@@ -83,11 +96,4 @@
             transition: 0.3s;
         }
     }
-}
-
-.navbar {
-    width: 47%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
 }

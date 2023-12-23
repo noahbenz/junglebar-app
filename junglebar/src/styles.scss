@@ -2,6 +2,7 @@
 
 :root {
     --yellow: #ffcf07;
+    --green: #30483A
 }
 
 *, body, html {
@@ -40,6 +41,11 @@ h3 {
         font-size: 35px !important;
     }
 }
+@media (max-width: 900px) {
+    nav a {
+        font-size: 80px !important;
+    }
+}
 
 @media (max-width: 850px) {
     h1 {
@@ -54,7 +60,7 @@ h3 {
         font-size: 40px;
     }
 
-    nav a, a {
+    a {
         font-size: 25px !important;
     }
 
@@ -76,7 +82,7 @@ h3 {
         font-size: 30px;
     }
 
-    nav a, a {
+    a {
         font-size: 20px !important;
     }
 

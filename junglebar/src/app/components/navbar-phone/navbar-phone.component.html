@@ -1,1 +1,13 @@
-<p>navbar-phone works!</p>
+<div [ngClass]="{'open-menu-background': isMenuOpen}" class="navbar-section-phone">
+    <img [src]="iconSrc" alt="" class="burger-icon" (click)="toggleMenu()">
+    <nav *ngIf="isMenuOpen" >
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
+        <li><a routerLink="/drinks">DRINKS</a></li>
+        <li><a routerLink="/book">BOOK</a></li>
+        <li><a routerLink="/contact">CONTACT</a></li>
+        <li><a routerLink="/profile">PROFILE</a></li>
+        <li><a routerLink="/login">LOGIN</a></li>
+    </ul>
+    </nav>
+</div>
