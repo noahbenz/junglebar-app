@@ -1,13 +1,17 @@
-<div [ngClass]="{'open-menu-background': isMenuOpen}" class="navbar-section-phone">
-    <img [src]="iconSrc" alt="" class="burger-icon" (click)="toggleMenu()">
-    <nav *ngIf="isMenuOpen" >
-    <ul>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700" data-aos-delay="100"><a routerLink="/drinks">DRINKS</a></li>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700" data-aos-delay="200"><a routerLink="/book">BOOK</a></li>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700" data-aos-delay="300"><a routerLink="/contact">CONTACT</a></li>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700" data-aos-delay="400"><a routerLink="/profile">PROFILE</a></li>
-        <li data-aos="fade-left" data-aos-offset="200" data-aos-duration="700" data-aos-delay="500"><a routerLink="/login">LOGIN</a></li>
-    </ul>          
-    </nav>
-</div>
+<input type="checkbox" id="navi-toggle" class="checkbox" />
+<label for="navi-toggle" class="button">
+  <span class="icon">&nbsp;</span>
+</label>
+<div class="background">&nbsp;</div>
+
+<!-- nav -->
+<nav class="nav">
+  <ul class="list">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
+    <li><a routerLink="/drinks">DRINKS</a></li>
+    <li><a routerLink="/book">BOOK</a></li>
+    <li><a routerLink="/contact">CONTACT</a></li>
+    <li><a routerLink="/profile">PROFILE</a></li>
+    <li><a routerLink="/login">LOGIN</a></li>
+  </ul>
+</nav>
