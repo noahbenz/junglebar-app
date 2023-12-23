@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLinkActive, RouterModule } from '@angular/router';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-navbar',
@@ -9,5 +10,7 @@ import { RouterLinkActive, RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  ngOnInit() {
+    AOS.init();
+  }
 }
