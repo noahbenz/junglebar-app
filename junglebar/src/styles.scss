@@ -8,6 +8,26 @@
     --black: #000000;
 }
 
+html {
+    scrollbar-width: normal;
+    scrollbar-color: #f4f4f4;
+    overflow-x: hidden;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 20px;
+    height: 40px !important;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background-color: var(--green);
+  }
+
 *, body, html {
     margin: 0;
     padding: 0;
@@ -25,6 +45,10 @@ h2 {
 
 h3 {
     font-size: 40px;
+}
+
+p {
+    font-size: 20px;
 }
 
 @media (max-width: 1150px) {
@@ -63,6 +87,10 @@ h3 {
         font-size: 40px;
     }
 
+    p {
+        font-size: 18px !important;
+    }
+
     a {
         font-size: 25px !important;
     }
@@ -87,6 +115,10 @@ h3 {
 
     a {
         font-size: 20px !important;
+    }
+
+    p {
+        font-size: 16px;
     }
 
     button {
