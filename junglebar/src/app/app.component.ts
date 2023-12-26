@@ -1,4 +1,4 @@
-import { AboutUsComponent } from './components/about-us/about-us.component';
+import AboutUsComponent from './components/about-us/about-us.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
