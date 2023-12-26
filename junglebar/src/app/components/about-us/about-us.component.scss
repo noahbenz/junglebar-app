@@ -1,6 +1,6 @@
 /* Default styles */
 .about-us {
-    height: 90vh;
+    height: 500px;
     display: flex;
     justify-content: space-between;
 }
@@ -15,10 +15,12 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-image: url(../../../assets/img/jungleplant-bottomleft.png);
+    background-repeat: no-repeat;
 
     img {
-        width: 300px;
-        height: 300px;
+        width: 400px;
+        height: 400px;
         object-fit: cover;
         object-position: center;
         border-radius: 50%;
@@ -27,7 +29,9 @@
 
 .text-about-us {
     height: 100%;
-    margin-right: 10%;
+    background-image: url(../../../assets/img/jungleplant-topright.png);
+    background-repeat: no-repeat;
+    background-position: right top;
 
     h3 {
         margin-top: 50px;
@@ -40,16 +44,37 @@
 
     p {
         margin-top: 30px;
+        margin-right: 10%;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1120px) {
     .about-us {
         flex-direction: column-reverse;
+        height: fit-content;
+        
+        h3 {
+            padding-top: 30px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        p {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    .img-about-us {
+        margin-top: 30px;
+        
+        img {
+            padding-bottom: 30px;
+        }
     }
 
     .img-about-us, .text-about-us {
-        width: 90%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
