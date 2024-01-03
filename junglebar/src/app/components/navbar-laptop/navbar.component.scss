@@ -21,10 +21,9 @@ nav {
         cursor: pointer;
         } 
     }
+    .active {
+      border-bottom: 5px solid;
+      border-color: var(--yellow);
+      width: fit-content;
   }
-  
-  .active {
-    border-bottom: var(--yellow);
-    border-bottom: 5px solid; 
-    width: fit-content;
 }
