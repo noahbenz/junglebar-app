@@ -12,7 +12,7 @@
         <p>*************</p>
     </div>
     <div class="profile-box favorite-drinks">
-        <a>&nbsp;&nbsp;&nbsp;&nbsp;FAVORITE DRINKS &#10140;&nbsp;&nbsp;&nbsp;</a>
+        <a (click)="openFavoriteDrinksModal()">&nbsp;&nbsp;&nbsp;&nbsp;FAVORITE DRINKS &#10140;&nbsp;&nbsp;&nbsp;</a>
     </div>
     <div class="profile-box navbar-profile">
         <app-navbar></app-navbar>
@@ -22,3 +22,8 @@
         <div class="text-quote"><p>Sharing your password is like sharing your toothbrush it's a hygiene issue for your online security!</p></div>
     </div>
 </div>
+
+<app-favorite-drinks
+  *ngIf="isFavoriteDrinksModalOpen"
+  (closeModalEvent)="closeFavoriteDrinksModal()">
+</app-favorite-drinks>
