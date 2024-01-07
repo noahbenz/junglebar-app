@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 export const routes: Routes = [
   { path: '', component: LandingpageComponent },
@@ -11,7 +12,8 @@ export const routes: Routes = [
   // { path: 'contact', component: ContactComponent },
   // { path: 'profile', component: ProfileComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'register', component: RegisterComponent }
+    { path: 'register', component: RegisterComponent },
+    { path: 'profile', component: ProfileComponent },
 
 ];
 

@@ -1,0 +1,29 @@
+<div class="profile-container">
+    <div class="navbar-phone">
+        <app-navbar-phone></app-navbar-phone>
+    </div>
+    <div class="profile-box profile-data">
+        <img src="../../../assets/svg/profile-picture.svg" alt="">
+        <h3>NAME</h3>
+        <p>Moritz</p>
+        <h3>EMAIL</h3>
+        <p>moritz&#64;gmail.com</p>
+        <h3>PASSWORD</h3>
+        <p>*************</p>
+    </div>
+    <div class="profile-box favorite-drinks">
+        <a (click)="openFavoriteDrinksModal()">&nbsp;&nbsp;&nbsp;&nbsp;FAVORITE DRINKS &#10140;&nbsp;&nbsp;&nbsp;</a>
+    </div>
+    <div class="profile-box navbar-profile">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="remember-quote">
+        <h3>REMEMBER</h3>
+        <div class="text-quote"><p>Sharing your password is like sharing your toothbrush it's a hygiene issue for your online security!</p></div>
+    </div>
+</div>
+
+<app-favorite-drinks
+  *ngIf="isFavoriteDrinksModalOpen"
+  (closeModalEvent)="closeFavoriteDrinksModal()">
+</app-favorite-drinks>
