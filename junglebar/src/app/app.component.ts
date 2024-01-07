@@ -6,11 +6,12 @@ import { LandingpageComponent } from './components/landingpage/landingpage.compo
 import { NavbarComponent } from './components/navbar-laptop/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FavoriteDrinksComponent } from './components/favorite-drinks/favorite-drinks.component';
+import { BookingFormComponent } from './components/booking-form/booking-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent],
+  imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent, BookingFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
