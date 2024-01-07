@@ -52,7 +52,7 @@
             transform: translate(-50%, -50%);
             text-align: left;
             border-radius: 10px;
-            color: black;
+            color: var(--black);
 
             h3 {
                 text-transform: uppercase;
@@ -86,7 +86,7 @@
             }
 
             button {
-                color: black;
+                color: var(--black);
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
@@ -103,7 +103,7 @@
 
             a.register-link {
                 text-decoration: none;
-                color: black;
+                color: var(--black);
                 text-wrap: nowrap;
                 font-size: 20px;
                 transition: 0.4s ease-out;
