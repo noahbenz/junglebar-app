@@ -12,14 +12,22 @@
   }
   
   .modal-content {
-    background-color: white;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 15px;
     width: 80%;
     height: 80%;
     overflow-y: auto;
-
-    button {
-        cursor: pointer;
+ 
+    a {
+      cursor: pointer;
+      position: absolute;
+      top: 10%;
+      right: 10%;
     }
-  }  
+  
+    img {
+      width: 20px;
+    }
+  }
+  

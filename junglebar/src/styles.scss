@@ -4,12 +4,13 @@
 :root {
     --yellow: #ffcf07;
     --green: #30483A;
-    --black: #000000;
+    --black: #0b1215;
+    --white: #c7c7c7;
 }
 
 html {
     scrollbar-width: normal;
-    scrollbar-color: #f4f4f4;
+    scrollbar-color: var(--white);
     overflow-x: hidden;
   }
   
@@ -37,18 +38,22 @@ html {
 
 h1 {
     font-size: 100px;
+    columns: var(--black);
 }
 
 h2 {
     font-size: 70px;
+    columns: var(--black);
 }
 
 h3 {
     font-size: 40px;
+    columns: var(--black);
 }
 
 p {
     font-size: 20px;
+    columns: var(--black);
 }
 
 @media (max-width: 1150px) {
