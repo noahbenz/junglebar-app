@@ -15,8 +15,9 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-image: url(../../../assets/img/jungleplant-bottomleft.png);
+    background-image: url(../../../assets/svg/watermelon.svg);
     background-repeat: no-repeat;
+    background-position: bottom left;
 
     img {
         width: 400px;
@@ -29,9 +30,9 @@
 
 .text-about-us {
     height: 100%;
-    background-image: url(../../../assets/img/jungleplant-topright.png);
+    background-image: url(../../../assets/svg/pineapple.svg);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: top right;
 
     h3 {
         margin-top: 50px;
