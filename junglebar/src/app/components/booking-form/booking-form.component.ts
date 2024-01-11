@@ -1,22 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-booking-form',
   standalone: true,
-  imports: [FormBuilder, FormGroup],
+  imports: [ReactiveFormsModule],
   templateUrl: './booking-form.component.html',
   styleUrl: './booking-form.component.scss'
 })
 export class BookingFormComponent implements OnInit{
-  form: FormGroup | undefined;
+  form: any;
 
   ngOnInit(): void {
     this.buildForm();
   }
 
-  constructor(private formBuilder: FormBuilder) {}
-
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      name: null,
+      email: null,
+      message: null
+    });
+  }
+  
   send(): void {
     const { name, email, message } = this.form!.value;
     alert(`Name: ${name}, Email: ${email}, Message: ${message} `);
