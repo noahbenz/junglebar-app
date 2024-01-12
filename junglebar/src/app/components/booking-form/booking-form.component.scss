@@ -6,8 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  position: relative;
 
+  background-image: url('../../../assets/svg/fruity.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 .form-container {
   width: 70%;
   margin: 50px auto 50px auto;
