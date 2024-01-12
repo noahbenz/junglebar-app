@@ -28,7 +28,7 @@ export class BookingFormComponent implements OnInit {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
 
-      const formSubmitUrl = 'https://formsubmit.co/ajax/your@email.com';
+      const formSubmitUrl = 'https://formsubmit.co/ajax/jannandrea.f@gmail.com';
 
       this.http.post(formSubmitUrl, formData)
         .subscribe(
