@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';  // Stellen Sie sicher, dass der Pfad korrekt ist
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']  // Achten Sie darauf, dass es 'styleUrls' und nicht 'styleUrl' ist
+  styleUrls: ['./register.component.scss']  
 })
 export class RegisterComponent implements OnInit {
   signupObj: any = {
@@ -21,7 +22,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   public onSignUp() {
-    this.authService.signUp(this.signupObj);
-    this.signupObj = { userName: '', email: '', password: '' };
+    if (this.signupObj.userName === '' || this.signupObj.email === '' || this.signupObj.password === '') {
+      alert('Please enter all details');
+    } else {
+      this.authService.signUp(this.signupObj);
+      this.signupObj = { userName: '', email: '', password: '' };
+    }
+    
   }
 }
