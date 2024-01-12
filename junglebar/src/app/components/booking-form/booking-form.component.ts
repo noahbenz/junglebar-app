@@ -1,38 +1,45 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-booking-form',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, HttpClient],
   templateUrl: './booking-form.component.html',
   styleUrl: './booking-form.component.scss'
 })
-export class BookingFormComponent implements OnInit{
-  form: any;
+export class BookingFormComponent implements OnInit {
+  contactForm!: FormGroup;
 
-  ngOnInit(): void {
-    this.buildForm();
-  }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
-  constructor(private formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
-      name: null,
-      email: null,
-      message: null
+  ngOnInit() {
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
     });
   }
-  
-  send(): void {
-    const { name, email, message } = this.form!.value;
-    alert(`Name: ${name}, Email: ${email}, Message: ${message} `);
-  }
 
-  private buildForm(): void {
-    this.form = this.formBuilder.group({
-      name: this.formBuilder.control(null),
-      email: this.formBuilder.control(null),
-      message: this.formBuilder.control(null),
-    });
+  onSubmit() {
+    if (this.contactForm.valid) {
+      const formData = this.contactForm.value;
+
+      // Modify the URL to your desired endpoint
+      const formSubmitUrl = 'https://formsubmit.co/36edd6f61d356d3a6af959552e803d13';
+
+      this.http.post(formSubmitUrl, formData)
+        .subscribe(
+          response => {
+            // Handle success response
+            console.log('Form submitted successfully', response);
+          },
+          error => {
+            // Handle error response
+            console.error('Error submitting form', error);
+          }
+        );
+    }
   }
 }
