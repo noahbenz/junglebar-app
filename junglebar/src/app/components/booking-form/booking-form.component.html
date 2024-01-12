@@ -1,6 +1,6 @@
 <section id="contact" class="form-section">
   <div class="form-container">
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" action="https://formsubmit.co/36edd6f61d356d3a6af959552e803d13" method="POST" class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" action="POST" class="contact-form">
       <input type="text" name="_honey" style="display: none;">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
@@ -21,5 +21,8 @@
       </div>
       <button type="submit" class="submit-button" [disabled]="!contactForm.valid">Send</button>
     </form>
+    <div *ngIf="successMessage" class="success-message" style="margin-top: 15px;">
+      {{ successMessage }}
+    </div>
   </div>
 </section>

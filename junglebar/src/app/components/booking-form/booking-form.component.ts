@@ -1,16 +1,18 @@
-import { HttpClient } from '@angular/common/http';
+import { NgIf } from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-booking-form',
   standalone: true,
-  imports: [ReactiveFormsModule, HttpClient],
+  imports: [ReactiveFormsModule, HttpClientModule, NgIf],
   templateUrl: './booking-form.component.html',
   styleUrl: './booking-form.component.scss'
 })
 export class BookingFormComponent implements OnInit {
   contactForm!: FormGroup;
+  successMessage: string | null = null;
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
@@ -26,17 +28,18 @@ export class BookingFormComponent implements OnInit {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
 
-      // Modify the URL to your desired endpoint
-      const formSubmitUrl = 'https://formsubmit.co/36edd6f61d356d3a6af959552e803d13';
+      const formSubmitUrl = 'https://formsubmit.co/ajax/your@email.com';
 
       this.http.post(formSubmitUrl, formData)
         .subscribe(
           response => {
-            // Handle success response
             console.log('Form submitted successfully', response);
+
+              this.successMessage = 'YEEEHAA WELCOME TO THE JUNGLE!';
+
+            this.contactForm.reset();
           },
           error => {
-            // Handle error response
             console.error('Error submitting form', error);
           }
         );
