@@ -4,10 +4,11 @@ import { LandingpageComponent } from './components/landingpage/landingpage.compo
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DrinksComponent } from './components/drinks/drinks.component';
 
 export const routes: Routes = [
   { path: '', component: LandingpageComponent },
-  // { path: 'drinks', component: DrinksComponent },
+  { path: 'drinks', component: DrinksComponent },
   // { path: 'book', component: BookComponent },
   // { path: 'contact', component: ContactComponent },
   // { path: 'profile', component: ProfileComponent },

@@ -1,0 +1,27 @@
+.drinks {
+    height: auto;
+    background-image: url(../../../assets/img/bg-profile.png);
+    background-size: cover;
+}
+
+.navbar-phone {
+    display: none;
+}
+
+.navbar {
+    height: 100vh;
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 900px) {
+    .navbar-phone {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
