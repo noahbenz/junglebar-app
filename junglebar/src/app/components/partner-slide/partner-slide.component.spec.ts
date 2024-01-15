@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { partnerScroll } from './fruit-divider.component';
+import { partnerScroll } from './partner-slide.component';
 
 describe('partnerScroll', () => {
   let component: partnerScroll;

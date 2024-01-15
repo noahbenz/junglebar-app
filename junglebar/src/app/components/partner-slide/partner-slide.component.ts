@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-partners',
   standalone: true,
   imports: [],
-  templateUrl: './fruit-divider.component.html',
-  styleUrl: './fruit-divider.component.scss'
+  templateUrl: './partner-slide.component.html',
+  styleUrl: './partner-slide.component.scss'
 })
 export class partnerScroll {
 
