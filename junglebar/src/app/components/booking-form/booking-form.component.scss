@@ -49,7 +49,7 @@
   color: var(--yellow);
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
   font-size: 30px;
   width: fit-content;
   border-bottom: 5px solid;
@@ -57,7 +57,7 @@
   &:hover{
       transition: 0.4s ease;
       color: #796000;
-      cursor: pointer;
+        cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
     } 
 }
 
