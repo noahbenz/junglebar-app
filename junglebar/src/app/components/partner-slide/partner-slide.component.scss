@@ -1,8 +1,15 @@
+.our-partners{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
 .partner-slide{
+    flex-direction: column;
     height: 200px;
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 @keyframes slide {
@@ -16,7 +23,7 @@
   
   .logos {
     overflow: hidden;
-    padding: 60px 0;
+    padding: 40px 0;
     white-space: nowrap;
     position: relative;
     &:hover .logos-slide {
