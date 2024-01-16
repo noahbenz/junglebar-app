@@ -1,0 +1,73 @@
+.our-partners{
+    text-align: center;
+    margin-top: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.partner-slide{
+    flex-direction: column;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .logos {
+    border-bottom: 2px solid #ddd; 
+    border-top: 2px solid #ddd; 
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    position: relative;
+    &:hover .logos-slide {
+      animation-play-state: paused;
+    }
+  
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+  
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    }
+  
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    }
+  }
+  
+  
+  .logos-slide {
+    display: inline-block;
+    white-space: nowrap;
+    animation: 20s slide infinite linear;
+  
+    img {
+      height: 70px;
+      margin: 0 40px;
+      background-blend-mode: color-burn;
+    }
+  }
+  span {
+    border-color: var(--yellow) !important;
+  }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FruitDividerComponent } from './fruit-divider.component';
+import { partnerScroll } from './partner-slide.component';
 
-describe('FruitDividerComponent', () => {
-  let component: FruitDividerComponent;
-  let fixture: ComponentFixture<FruitDividerComponent>;
+describe('partnerScroll', () => {
+  let component: partnerScroll;
+  let fixture: ComponentFixture<partnerScroll>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FruitDividerComponent]
+      imports: [partnerScroll]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FruitDividerComponent);
+    fixture = TestBed.createComponent(partnerScroll);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
