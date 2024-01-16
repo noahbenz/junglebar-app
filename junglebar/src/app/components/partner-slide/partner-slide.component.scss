@@ -1,15 +1,17 @@
 .our-partners{
+    text-align: center;
     margin-top: 50px;
-    display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .partner-slide{
     flex-direction: column;
-    height: 200px;
+    height: 250px;
     display: flex;
     justify-content: center;
     width: 100%;
     margin-bottom: 50px;
+
 }
 
 @keyframes slide {
@@ -22,8 +24,11 @@
   }
   
   .logos {
+    border-bottom: 2px solid #ddd; 
+    border-top: 2px solid #ddd; 
     overflow: hidden;
-    padding: 40px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     white-space: nowrap;
     position: relative;
     &:hover .logos-slide {
@@ -51,15 +56,18 @@
     }
   }
   
+  
   .logos-slide {
     display: inline-block;
     white-space: nowrap;
     animation: 20s slide infinite linear;
   
     img {
-      height: 50px;
+      height: 70px;
       margin: 0 40px;
       background-blend-mode: color-burn;
     }
   }
-  
+  span {
+    border-color: var(--yellow) !important;
+  }
