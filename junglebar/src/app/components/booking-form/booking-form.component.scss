@@ -67,6 +67,9 @@
   }
 }
 
-span {
-  border-color: var(--black) !important;
+.form-title span {
+  text-decoration: underline 6px solid var(--black); 
+  text-underline-offset: 5px; 
+  border-color: transparent !important; 
 }
+
