@@ -10,8 +10,10 @@
             <h5 class="favorite-icon">&#9825;</h5>
             <img [src]="drink.imageUrl" alt="{{ drink.name }} Image">
             <h3 id="name-drink">{{ drink.name }}</h3>
-            <p id="ingredient">{{ drink.ingredients.join(', ') }}</p>
-          </div>                               
+            <ul id="ingredient">
+                <li *ngFor="let ingredient of drink.ingredients"> {{ ingredient }}</li>
+            </ul>
+        </div>                               
     </div>
     <div class="navbar">
         <app-navbar></app-navbar>
