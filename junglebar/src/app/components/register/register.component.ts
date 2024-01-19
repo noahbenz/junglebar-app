@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';  // Stellen Sie sicher, dass der Pfad korrekt ist
+import { AuthService } from '../../services/auth.service';
 import { RouterModule } from '@angular/router';
 
 @Component({

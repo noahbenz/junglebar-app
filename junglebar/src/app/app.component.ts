@@ -1,4 +1,5 @@
-import AboutUsComponent from './components/about-us/about-us.component';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -9,12 +10,41 @@ import { FavoriteDrinksComponent } from './components/favorite-drinks/favorite-d
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+@NgModule({
+  declarations: [
+    LandingpageComponent,
+    NavbarComponent,
+    ProfileComponent,
+    FavoriteDrinksComponent,
+    BookingFormComponent,
+  ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
+  exports: [
+    LandingpageComponent,
+    NavbarComponent,
+    ProfileComponent,
+    FavoriteDrinksComponent,
+    BookingFormComponent,
+  ],
+})
+
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent, BookingFormComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    AppComponent,
+  ],
 })
 export class AppComponent {
   title = 'junglebar';
