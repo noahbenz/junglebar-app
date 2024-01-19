@@ -4,11 +4,12 @@ import { NavbarPhoneComponent } from '../navbar-phone/navbar-phone.component';
 import AboutUsComponent from '../about-us/about-us.component';
 import { partnerScroll } from '../partner-slide/partner-slide.component';
 import { BookingFormComponent } from '../booking-form/booking-form.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [NavbarComponent, NavbarPhoneComponent, AboutUsComponent, partnerScroll, BookingFormComponent],
+  imports: [NavbarComponent, NavbarPhoneComponent, AboutUsComponent, partnerScroll, BookingFormComponent, FooterComponent],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
