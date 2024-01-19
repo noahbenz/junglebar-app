@@ -3,12 +3,13 @@ import { NavbarComponent } from '../navbar-laptop/navbar.component';
 import { NavbarPhoneComponent } from '../navbar-phone/navbar-phone.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from '../footer/footer.component';
 
 
 @Component({
   selector: 'app-drinks',
   standalone: true,
-  imports: [NavbarComponent, NavbarPhoneComponent, HttpClientModule, CommonModule],
+  imports: [NavbarComponent, NavbarPhoneComponent, HttpClientModule, CommonModule, FooterComponent],
   templateUrl: './drinks.component.html',
   styleUrl: './drinks.component.scss'
 })
