@@ -56,7 +56,7 @@
     color: var(--white);
 }
 
-.drink-card img {
+.drink-img {
     width: 100%;
     height: 280px;
     object-fit: cover;
@@ -68,11 +68,11 @@
 }
 
 .favorite-icon {
+    width: 24px;
     position: absolute;
-    top : 2px;
+    top : 8px;
     left: 8px;
     font-size: 34px;
-    color: #be2c25;
       cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
 }
 

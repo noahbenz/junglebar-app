@@ -7,8 +7,8 @@
     </div>
     <div class="drink-container">        
         <div *ngFor="let drink of drinks" class="drink-card">
-            <h5 class="favorite-icon">&#9825;</h5>
-            <img [src]="drink.imageUrl" alt="{{ drink.name }} Image">
+            <img src="../../../assets/icons/star-icon.svg" alt="" class="favorite-icon">
+            <img [src]="drink.imageUrl" alt="{{ drink.name }} Image" class="drink-img">
             <h3 id="name-drink">{{ drink.name }}</h3>
             <ul id="ingredient">
                 <li *ngFor="let ingredient of drink.ingredients"> {{ ingredient }}</li>
