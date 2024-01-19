@@ -112,3 +112,10 @@
         margin-right: auto;
     }
 }
+
+@media (max-width: 600px) {
+    .img-about-us img {
+        width: 280px;
+    }
+}
+
