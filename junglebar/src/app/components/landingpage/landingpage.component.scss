@@ -74,7 +74,7 @@
 
     &:hover {
         transform: scale(1.05);
-        cursor: pointer;
+          cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
         transition: 0.3s;
     }
 }
@@ -94,7 +94,7 @@
 
         &:hover {
             transform: scale(1.15);
-            cursor: pointer;
+              cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
             transition: 0.3s;
         }
     }

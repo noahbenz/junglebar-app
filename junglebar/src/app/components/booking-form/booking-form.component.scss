@@ -6,8 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  position: relative;
 
+  background-image: url('../../../assets/svg/fruity.svg');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 .form-container {
   width: 70%;
   margin: 50px auto 50px auto;
@@ -45,7 +49,7 @@
   color: var(--yellow);
   background-color: transparent;
   border: none;
-  cursor: pointer;
+  cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
   font-size: 30px;
   width: fit-content;
   border-bottom: 5px solid;
@@ -53,7 +57,7 @@
   &:hover{
       transition: 0.4s ease;
       color: #796000;
-      cursor: pointer;
+        cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
     } 
 }
 
@@ -63,6 +67,9 @@
   }
 }
 
-span {
-  border-color: var(--black) !important;
+.form-title span {
+  text-decoration: underline 6px solid var(--black); 
+  text-underline-offset: 5px; 
+  border-color: transparent !important; 
 }
+

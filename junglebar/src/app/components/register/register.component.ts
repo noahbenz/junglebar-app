@@ -1,13 +1,33 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';  // Stellen Sie sicher, dass der Pfad korrekt ist
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [RouterLink],
+  imports: [FormsModule, RouterModule],
   templateUrl: './register.component.html',
-  styleUrl: './register.component.scss'
+  styleUrls: ['./register.component.scss']  
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
+  signupObj: any = {
+    userName: '',
+    email: '',
+    password: ''
+  };
 
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {}
+
+  public onSignUp() {
+    if (this.signupObj.userName === '' || this.signupObj.email === '' || this.signupObj.password === '') {
+      alert('Please enter all details');
+    } else {
+      this.authService.signUp(this.signupObj);
+      this.signupObj = { userName: '', email: '', password: '' };
+    }
+    
+  }
 }

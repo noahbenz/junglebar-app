@@ -20,7 +20,7 @@
     overflow-y: auto;
  
     a {
-      cursor: pointer;
+        cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
       position: absolute;
       top: 10%;
       right: 10%;

@@ -7,11 +7,12 @@ import { NavbarComponent } from './components/navbar-laptop/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FavoriteDrinksComponent } from './components/favorite-drinks/favorite-drinks.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent, BookingFormComponent],
+  imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent, BookingFormComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

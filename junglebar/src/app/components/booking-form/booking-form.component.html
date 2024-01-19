@@ -1,20 +1,28 @@
 <section id="contact" class="form-section">
   <div class="form-container">
-    <form [formGroup]="form" (ngSubmit)="send()" class="contact-form">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" action="POST" class="contact-form">
+      <input type="text" name="_honey" style="display: none;">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_next" value="http://localhost:4200/#contact">
+
       <h3 class="form-title"><span>Take</span> A SEAT IN THE JUNGLE</h3>
       <div class="form-group">
-        <label for="name">Name</label>
-        <input formControlName="name" type="text" id="name" name="name" />
+        <label for="lastname-contact">Name</label>
+        <input id="lastname-contact" formControlName="name" type="text" aria-required="true" />
       </div>
       <div class="form-group">
-        <label for="email">Email</label>
-        <input formControlName="email" type="email" id="email" name="email" />
+        <label for="email-contact">Email</label>
+        <input id="email-contact" formControlName="email" type="email" aria-required="true" />
       </div>
       <div class="form-group">
-        <label for="message">Message</label>
-        <textarea formControlName="message" id="message" name="message"></textarea>
+        <label for="message-contact">Your preferences</label>
+        <textarea id="message-contact" formControlName="message" placeholder="How many people? Sitting or standing table?" aria-required="true"></textarea>
       </div>
-      <button type="submit" class="submit-button">Send</button>
+      <button type="submit" class="submit-button" [disabled]="!contactForm.valid">Send</button>
     </form>
+    <div *ngIf="successMessage" class="success-message" style="margin-top: 15px;">
+      {{ successMessage }}
+    </div>
   </div>
 </section>

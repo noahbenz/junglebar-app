@@ -5,7 +5,7 @@
     --yellow: #ffcf07;
     --green: #30483A;
     --black: #0b1215;
-    --white: #c7c7c7;
+    --white: #eeeeee;
 }
 
 html {
@@ -34,7 +34,7 @@ html {
     font-family: 'Luckiest Guy', cursive;
     letter-spacing: 1.5px !important;
     scroll-behavior: smooth;
-    cursor: url(assets/img/apple-cursor.png), auto !important;
+    cursor: url(assets/svg/cursor-normal.svg), auto !important;
 }
 
 h1 {

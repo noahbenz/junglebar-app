@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
-    background: url(../../../assets/img/bg-profile.png);
+    width: 100%;
+    background: url(../../../assets/svg/tropical-bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -37,14 +38,14 @@
     a {
         font-size: 25px;
         color: var(--yellow);
-        cursor: pointer;
+          cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
         text-decoration: underline 4px;
         margin-bottom: 200px;
         transition: 0.4s ease-out;   
         &:hover{
             transition: 0.4s ease;
             color: #796000;
-            cursor: pointer;
+              cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
         } 
     }
 }
