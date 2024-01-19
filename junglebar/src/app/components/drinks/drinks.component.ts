@@ -21,6 +21,7 @@ export class DrinksComponent implements OnInit {
     this.getRandomDrinks(14);
   }
 
+
   getRandomDrinks(count: number) {
     for (let i = 0; i < count; i++) {
       this.httpClient.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
@@ -29,7 +30,8 @@ export class DrinksComponent implements OnInit {
           this.drinks.push({
             name: drink.strDrink,
             ingredients: this.extractIngredients(drink),
-            imageUrl: drink.strDrinkThumb
+            imageUrl: drink.strDrinkThumb,
+            isFavorited: false 
           });
         });
     }
@@ -45,5 +47,9 @@ export class DrinksComponent implements OnInit {
       }
     }
     return ingredients;
+    
+  }
+  toggleFavorite(drink: any) {
+    drink.isFavorited = !drink.isFavorited;
   }
 }

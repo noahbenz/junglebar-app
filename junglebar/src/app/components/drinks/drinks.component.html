@@ -1,21 +1,23 @@
-<section class="drinks">
-    <div class="navbar-phone">
-        <app-navbar-phone></app-navbar-phone>
-    </div>
-    <div class="title">
-        <h2>OUR ELIXIR</h2>
-    </div>
-    <div class="drink-container">        
-        <div *ngFor="let drink of drinks" class="drink-card">
-            <img src="../../../assets/icons/star-icon.svg" alt="" class="favorite-icon">
-            <img [src]="drink.imageUrl" alt="{{ drink.name }} Image" class="drink-img">
-            <h3 id="name-drink">{{ drink.name }}</h3>
-            <ul id="ingredient">
-                <li *ngFor="let ingredient of drink.ingredients"> {{ ingredient }}</li>
-            </ul>
-        </div>                               
-    </div>
-    <div class="navbar">
-        <app-navbar></app-navbar>
-    </div>
-</section>
+    <section class="drinks">
+        <div class="navbar-phone">
+            <app-navbar-phone></app-navbar-phone>
+        </div>
+        <div class="title">
+            <h2>OUR ELIXIR</h2>
+        </div>
+        <div class="drink-container">        
+            <div *ngFor="let drink of drinks" class="drink-card">
+                <img [src]="drink.isFavorited ? '../../../assets/icons/star-icon-filled.svg' : '../../../assets/icons/star-icon.svg'"
+                alt="" class="favorite-icon"
+                (click)="toggleFavorite(drink)">
+                    <img [src]="drink.imageUrl" alt="{{ drink.name }} Image" class="drink-img">
+                <h3 id="name-drink">{{ drink.name }}</h3>
+                <ul id="ingredient">
+                    <li *ngFor="let ingredient of drink.ingredients"> {{ ingredient }}</li>
+                </ul>
+            </div>                               
+        </div>
+        <div class="navbar">
+            <app-navbar></app-navbar>
+        </div>
+    </section>
