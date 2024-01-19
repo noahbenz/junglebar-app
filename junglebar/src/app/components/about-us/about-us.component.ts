@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { DividerComponent } from '../divider/divider.component';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [],
+  imports: [DividerComponent],
   templateUrl: './about-us.component.html',
   styleUrl: './about-us.component.scss'
 })
