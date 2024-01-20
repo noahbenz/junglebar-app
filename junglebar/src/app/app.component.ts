@@ -1,5 +1,5 @@
 import AboutUsComponent from './components/about-us/about-us.component';
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { LandingpageComponent } from './components/landingpage/landingpage.component';
@@ -16,20 +16,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'junglebar';
-  @ViewChild('scrollUpArrow') scrollUpArrow: ElementRef | undefined;
-  isArrowVisible: boolean = false;
-
-  ngAfterViewInit() {
-    window.addEventListener('scroll', () => {
-      console.log('Scroll position:', window.scrollY);
-      if (window.scrollY > 100) {
-        this.isArrowVisible = true;
-      } else {
-        this.isArrowVisible = false;
-      }
-    });
-  }
-  
 }
