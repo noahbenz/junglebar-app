@@ -34,6 +34,8 @@ export class NavbarPhoneComponent {
 
   logout() {
     localStorage.removeItem('loggedIn');
+    localStorage.removeItem('username');
+    localStorage.removeItem('email');
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
   }

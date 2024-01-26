@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./login.component.scss'],
   providers: [UserService]
 })
+
 export class LoginComponent {
   email: string = '';
   password: string = '';
@@ -23,6 +24,8 @@ export class LoginComponent {
       .subscribe(
         (user) => {
           localStorage.setItem('loggedIn', 'true');
+          localStorage.setItem('username', user.name);
+          localStorage.setItem('email', user.email);
           
           this.router.navigate(['/']);
         },
