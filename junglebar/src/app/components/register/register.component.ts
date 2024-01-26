@@ -10,7 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
   standalone: true,
   imports: [FormsModule, RouterModule, HttpClientModule],
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']  
+  styleUrls: ['./register.component.scss'],
+  providers: [UserService]
 })
 export class RegisterComponent {
   signupObj: User = {
