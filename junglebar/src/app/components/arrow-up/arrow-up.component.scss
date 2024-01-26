@@ -1,0 +1,22 @@
+.arrow-up-link {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 10000;
+    display: none;
+
+    img {
+        width: 40px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.15);
+            cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+            transition: 0.3s;
+        }
+    }
+}
+
+.arrow-up-link.show {
+    display: block;
+}

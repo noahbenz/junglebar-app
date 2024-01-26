@@ -4,12 +4,13 @@ import { NavbarPhoneComponent } from '../navbar-phone/navbar-phone.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
+import { ArrowUpComponent } from '../arrow-up/arrow-up.component';
 
 
 @Component({
   selector: 'app-drinks',
   standalone: true,
-  imports: [NavbarComponent, NavbarPhoneComponent, HttpClientModule, CommonModule, FooterComponent],
+  imports: [NavbarComponent, NavbarPhoneComponent, HttpClientModule, CommonModule, ArrowUpComponent, FooterComponent],
   templateUrl: './drinks.component.html',
   styleUrl: './drinks.component.scss'
 })
