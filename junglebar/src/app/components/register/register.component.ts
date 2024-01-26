@@ -1,33 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';  // Stellen Sie sicher, dass der Pfad korrekt ist
 import { RouterModule } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user.model';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule, HttpClientModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']  
 })
-export class RegisterComponent implements OnInit {
-  signupObj: any = {
-    userName: '',
+export class RegisterComponent {
+  signupObj: User = {
+    id: 0,
     email: '',
+    name: '',
     password: ''
   };
 
-  constructor(private authService: AuthService) {}
+  constructor(private userService: UserService) { }
 
-  ngOnInit(): void {}
-
-  public onSignUp() {
-    if (this.signupObj.userName === '' || this.signupObj.email === '' || this.signupObj.password === '') {
-      alert('Please enter all details');
-    } else {
-      this.authService.signUp(this.signupObj);
-      this.signupObj = { userName: '', email: '', password: '' };
-    }
-    
+  onSignUp(): void {
+    this.userService.registerUser(this.signupObj).subscribe(
+      () => {
+        alert('Registrierung erfolgreich!');
+      },
+      (error) => {
+        console.error('Fehler bei der Registrierung:', error);
+        alert("something is wrong!!!!!")
+      }
+    );
   }
 }

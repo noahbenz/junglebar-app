@@ -8,16 +8,16 @@
             <h3>Create a key to the Wild</h3>
             
             <label for="username">User Name</label>
-            <input type="text" id="lastname" name="lastname" required [(ngModel)]="signupObj.userName">
+            <input type="text" id="lastname" name="lastname" required>
             
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required [(ngModel)]="signupObj.email">
+            <input type="email" id="email" name="email" required>
             
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required [(ngModel)]="signupObj.password">
+            <input type="password" id="password" name="password" required>
             
             <div class="button-container">
-                <button (click)="onSignUp()" type="submit">Create</button>
+                <button (click)="onSignUp()" type="button">Create</button>
                 <a class="register-link" routerLink="/login">Sign in</a>
             </div>
         </div>
