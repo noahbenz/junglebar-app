@@ -11,6 +11,7 @@
     <li><a routerLink="/drinks" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">DRINKS</a></li>
     <li><a routerLink="/book" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">BOOK</a></li>
     <li><a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">PROFILE</a></li>
-    <li><a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">LOGIN</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/login">LOGIN</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">LOGOUT</a></li>  
   </ul>
 </nav>

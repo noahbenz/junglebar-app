@@ -1,6 +1,6 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLinkActive, RouterModule } from '@angular/router';
+import { Router, RouterLinkActive, RouterModule } from '@angular/router';
 import AOS from 'aos';
 
 
@@ -26,5 +26,15 @@ export class NavbarPhoneComponent {
     } else {
       this.iconSrc = 'assets/svg/burger-icon.svg';
     }
+  }
+
+  isLoggedIn: boolean = localStorage.getItem('loggedIn') === 'true';
+
+  constructor(private router: Router) { }
+
+  logout() {
+    localStorage.removeItem('loggedIn');
+    this.isLoggedIn = false;
+    this.router.navigate(['/login']);
   }
 }
