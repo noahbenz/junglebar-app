@@ -13,6 +13,8 @@ import { FavoriteDrinksComponent } from '../favorite-drinks/favorite-drinks.comp
 })
 export class ProfileComponent {
   isFavoriteDrinksModalOpen = false;
+  username: string | null = localStorage.getItem('username');
+  email: string | null = localStorage.getItem('email');
 
   openFavoriteDrinksModal() {
     this.isFavoriteDrinksModalOpen = true;

@@ -33,7 +33,7 @@ export class NavbarPhoneComponent {
   constructor(private router: Router) { }
 
   logout() {
-    localStorage.removeItem('loggedIn');
+    localStorage.setItem('loggedIn', 'false');
     localStorage.removeItem('username');
     localStorage.removeItem('email');
     this.isLoggedIn = false;

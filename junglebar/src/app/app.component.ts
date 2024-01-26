@@ -1,4 +1,3 @@
-import AboutUsComponent from './components/about-us/about-us.component';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
@@ -8,14 +7,19 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FavoriteDrinksComponent } from './components/favorite-drinks/favorite-drinks.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import AboutUsComponent from './components/about-us/about-us.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, LandingpageComponent, NavbarComponent, RouterModule, AboutUsComponent, ProfileComponent, FavoriteDrinksComponent, BookingFormComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'] 
 })
 export class AppComponent {
   title = 'junglebar';
+
+  constructor() {
+    localStorage.setItem('loggedIn', 'false');
+  }
 }
