@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class BookingFormComponent implements OnInit {
   contactForm!: FormGroup;
   successMessage: string | null = null;
+  errorMessage: string | null = null;
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
@@ -25,6 +26,8 @@ export class BookingFormComponent implements OnInit {
   }
 
   onSubmit() {
+    this.errorMessage = null; // Setze die Fehlermeldung zuerst auf null, um vorherige Fehlermeldungen zu löschen
+
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
 
@@ -35,14 +38,17 @@ export class BookingFormComponent implements OnInit {
           response => {
             console.log('Form submitted successfully', response);
 
-              this.successMessage = 'YEEEHAA WELCOME TO THE JUNGLE!';
-
+            this.successMessage = 'YEEEHAA WELCOME TO THE JUNGLE!';
             this.contactForm.reset();
           },
           error => {
             console.error('Error submitting form', error);
+            this.errorMessage = 'Error submitting form. Please try again later.'; // Fehlermeldung anzeigen
           }
         );
+    } else {
+      this.errorMessage = 'Please fill out all required fields.'; // Fehlermeldung anzeigen
     }
   }
+  
 }

@@ -19,10 +19,13 @@
         <label for="message-contact">Your preferences</label>
         <textarea id="message-contact" formControlName="message" placeholder="How many people? Sitting or standing table?" aria-required="true"></textarea>
       </div>
-      <button type="submit" class="submit-button" [disabled]="!contactForm.valid">Send</button>
+      <button type="submit" class="submit-button">Send</button>
     </form>
     <div *ngIf="successMessage" class="success-message" style="margin-top: 15px;">
       {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="error-message" style="color: red; margin-top: 15px;">
+      {{ errorMessage }}
     </div>
   </div>
 </section>
