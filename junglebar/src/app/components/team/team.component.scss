@@ -16,8 +16,9 @@
     width: clamp(100px, 40vw, 120px);
     height: clamp(100px, 40vw, 120px);
     object-fit: cover;
-    object-position: top;
+    object-position: center; /* geändert von 'top' zu 'center' */
   }
+  
   
   .circle-top {
     width: clamp(25rem, 30vw, 31.25rem);
