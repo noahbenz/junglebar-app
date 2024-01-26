@@ -1,126 +1,117 @@
-.team-section{
-    margin-top: 5rem;
+.team-section {
+  margin-top: 5rem;
 }
 
-.cd__main {
-    min-height: 100vh;
-    min-height: 100svh;
-    background: #1f2c3a !important;
-    font-family: "Nunito", sans-serif;
-    position: relative;
-    overflow-x: hidden;
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Abstand zwischen den Karten */
+}
+
+/* Stil für die Flip-Karte */
+.flip-card {
+  background-color: transparent;
+  width: calc(33.33% - 20px); /* 3 Karten nebeneinander, Abstand subtrahieren */
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Stil für den Inhalt der Flip-Karte */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+/* Flip-Effekt beim Überfahren mit der Maus */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Stil für die Vorderseite der Flip-Karte */
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--green);
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+
+.flip-card-front img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--yellow);
+  position: absolute;
+  top: 20px;
+}
+
+.flip-card-front p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Stil für die Rückseite der Flip-Karte */
+.flip-card-back {
+  background-color: var(--green);
+  color: var(--yellow);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+
+/* Stil für das Funfact auf der Rückseite (optional) */
+.flip-card-back p.funfact {
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 10px;
+}
+
+/* Media Query für Mobilgeräte */
+@media (max-width: 768px) {
+  .team-cards {
+    flex-direction: column; /* Alle Karten in einer Spalte anordnen */
   }
   
-  img {
-    border-radius: 50%;
-    width: clamp(100px, 40vw, 120px);
-    height: clamp(100px, 40vw, 120px);
-    object-fit: cover;
-    object-position: center; /* geändert von 'top' zu 'center' */
+  .flip-card {
+    width: 100%; /* Volle Breite für Mobilgeräte */
   }
-  
-  
-  .circle-top {
-    width: clamp(25rem, 30vw, 31.25rem);
-    position: absolute;
-    top: 3em;
-    left: -8em;
-    height: clamp(25rem, 30vw, 31.25rem);
-    background: #00458f;
-    background: radial-gradient(circle, #00458f8f 0%, #00458e00 60%, #ffffff00 100%);
-    background: -moz-radial-gradient(circle, #00458f8f 0%, #00458e00 60%, #ffffff00 100%);
-    background: -webkit-radial-radial-gradient(circle, #00458f8f 0%, #00458e00 60%, #ffffff00 100%);
-    border-radius: 50%;
-  }
-  
-  .circle-bottom {
-    width: clamp(25rem, 30vw, 31.25rem);
-    position: absolute;
-    bottom: -5em;
-    right: -8em;
-    height: clamp(25rem, 30vw, 31.25rem);
-    background: #00458f;
-    background: radial-gradient(circle, #00458f8f 0%, #00458e00 65%, #ffffff00 100%);
-    background: -moz-radial-gradient(circle, #00458f8f 0%, #00458e00 65%, #ffffff00 100%);
-    background: -webkit-radial-radial-gradient(circle, #00458f8f 0%, #00458e00 65%, #ffffff00 100%);
-    border-radius: 50%;
-  }
-  
-  header {
-    background: linear-gradient(to top, #1f2c3a 0%, #2f3c4742 100%), url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat 50% 50%/cover;
-    width: 100%;
-    min-height: 25em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-  
-    .header-content {
-      width: min(37.5em, 90%);
-      margin-top: 5em;
-      position: relative;
-      z-index: 10;
-  
-      span {
-        display: inline-block;
-        text-transform: uppercase;
-        letter-spacing: 0.063rem;
-        font-size: clamp(0.8rem, 0.7625rem + 0.1875vw, 0.95rem);
-      }
-    }
-  }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 75em;
-    margin-inline: auto;
-    gap: 0.938rem;
-    transform: translatey(-3em);
-    position: relative;
-    z-index: 10;
-  
-    .card {
-      color: var(--yellow);
-      padding: 1.875em 1.25em;
-      max-width: 18.75rem;
-      width: 90%;
-      height: 16.875rem;
-      display: grid;
-      place-content: center;
-      place-items: center;
-      text-align: center;
-      position: relative;
-      background-color: var(--green);
-      border-radius: 12px;
-      overflow: hidden; 
-  
-      &::before {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-          border: linear-gradient(45deg, #1e272e, #48627a) border-box;
-      }
-  }
-  
-  
-    .card-top {
-      flex-basis: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 0.938rem;
-      flex-wrap: wrap;
-  
-      .card img {
-        width: clamp(120px, 40vw, 150px);
-        height: clamp(120px, 40vw, 150px);
-      }
-    }
-  }
+}
