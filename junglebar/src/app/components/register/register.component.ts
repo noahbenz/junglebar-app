@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Importiere das Router-Modul
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
@@ -21,12 +22,13 @@ export class RegisterComponent {
     password: ''
   };
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   onSignUp(): void {
     this.userService.registerUser(this.signupObj).subscribe(
       () => {
         alert('Registrierung erfolgreich!');
+        this.router.navigate(['/login']);
       },
       (error) => {
         console.error('Fehler bei der Registrierung:', error);

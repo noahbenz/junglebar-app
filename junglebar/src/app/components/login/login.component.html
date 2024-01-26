@@ -5,19 +5,19 @@
         <img class="ipad" src="../../../assets/svg/login-banner-ipad.svg" alt="" preload="auto">
 
         <div class="login-form">
-            <h3>Your Key to the Wild</h3>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <div class="button-container">
-                <button type="submit">Login</button>
-                <a class="register-link" routerLink="/register">No account?</a>
-            </div>
+        <h3>Your Key to the Wild</h3>
+  
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  
+        <div class="button-container">
+          <button type="button" (click)="login()">Login</button>
+          <a class="register-link" routerLink="/register">No account?</a>
         </div>
-        
+      </div>
     </div>
-</div>
+  </div>
+  
