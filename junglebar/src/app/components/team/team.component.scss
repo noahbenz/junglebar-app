@@ -84,6 +84,7 @@
     z-index: 10;
   
     .card {
+      color: var(--yellow);
       padding: 1.875em 1.25em;
       max-width: 18.75rem;
       width: 90%;
@@ -93,24 +94,22 @@
       place-items: center;
       text-align: center;
       position: relative;
+      background-color: var(--green);
+      border-radius: 12px;
+      overflow: hidden; 
   
       &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 1rem;
-        z-index: -1;
-        border: 0.125rem solid transparent;
-        background: linear-gradient(45deg, #1e272e, #48627a) border-box;
-        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: destination-out;
-        mask-composite: exclude;
+          position: absolute;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          border: linear-gradient(45deg, #1e272e, #48627a) border-box;
       }
-
-    }
+  }
+  
   
     .card-top {
       flex-basis: 100%;
