@@ -97,7 +97,7 @@
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -112,9 +112,6 @@
   backface-visibility: hidden;
 }
 
-
-/* Media Query für Mobilgeräte */
-/* Media Query für Mobilgeräte */
 @media (max-width: 768px) {
   .team-cards {
     flex-direction: column;
@@ -122,14 +119,14 @@
   }
 
   .cards-top, .cards-bottom {
-    width: 100%; /* Setzt die Breite der Container auf die volle Breite */
-    flex-direction: column; /* Stellt die Karten in einer Spalte dar */
-    align-items: center; /* Zentriert die Karten horizontal */
+    width: 100%; 
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .cards-top .flip-card, .cards-bottom .flip-card {
-    width: 80%; /* Stellt die Breite jeder Karte ein */
-    margin: 10px auto; /* Fügt oben und unten Abstand hinzu und zentriert die Karten horizontal */
-    flex: 0 0 auto; /* Überschreibt die Flex-Eigenschaft für Mobilgeräte */
+    width: 80%; 
+    margin: 10px auto; 
+    flex: 0 0 auto; 
   }
 }
