@@ -4,9 +4,21 @@
 
 .team-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column; /* Richtet die Karten-Container vertikal aus */
+  align-items: center; /* Zentriert die Container horizontal */
 }
+
+.cards-top, .cards-bottom {
+  display: flex;
+  justify-content: center; /* Zentriert die Karten innerhalb ihrer Container */
+}
+
+.cards-top .flip-card, .cards-bottom .flip-card {
+  margin: 10px; /* Abstand zwischen den Karten */
+  flex: 0 0 330px; /* Setzt eine feste Breite für die Karten */
+}
+
+
 
 
 .flip-card {
@@ -16,7 +28,7 @@
   perspective: 1000px;
   position: relative;
   cursor: pointer;
-  margin-bottom: 20px; 
+  margin-bottom: 40px; 
   overflow: hidden;
 }
 
@@ -102,13 +114,22 @@
 
 
 /* Media Query für Mobilgeräte */
+/* Media Query für Mobilgeräte */
 @media (max-width: 768px) {
   .team-cards {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
-  
-  .flip-card {
-    width: 80%; 
+
+  .cards-top, .cards-bottom {
+    width: 100%; /* Setzt die Breite der Container auf die volle Breite */
+    flex-direction: column; /* Stellt die Karten in einer Spalte dar */
+    align-items: center; /* Zentriert die Karten horizontal */
+  }
+
+  .cards-top .flip-card, .cards-bottom .flip-card {
+    width: 80%; /* Stellt die Breite jeder Karte ein */
+    margin: 10px auto; /* Fügt oben und unten Abstand hinzu und zentriert die Karten horizontal */
+    flex: 0 0 auto; /* Überschreibt die Flex-Eigenschaft für Mobilgeräte */
   }
 }
