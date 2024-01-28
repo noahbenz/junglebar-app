@@ -26,4 +26,8 @@ export class NavbarComponent {
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
   }
+
+  showLoginAlert() {
+    alert('Please log in to access your profile.');
+  }
 }

@@ -1,10 +1,23 @@
 <nav>
   <ul>
-      <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
-      <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="100" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/drinks">DRINKS</a></li>
-      <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200"><a href="#contact">BOOK</a></li>
-      <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="300" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/profile">PROFILE</a></li>
-      <li *ngIf="!isLoggedIn" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/login">LOGIN</a></li>
-      <li *ngIf="isLoggedIn" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a (click)="logout()">LOGOUT</a></li>  
-    </ul>
+    <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
+    </li>
+    <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="100" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="/drinks">DRINKS</a>
+    </li>
+    <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">
+      <a href="#contact">BOOK</a>
+    </li>
+    <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="300" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a *ngIf="isLoggedIn" routerLink="/profile">PROFILE</a>
+      <a *ngIf="!isLoggedIn" (click)="showLoginAlert()">PROFILE</a>
+    </li>
+    <li *ngIf="!isLoggedIn" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a routerLink="/login">LOGIN</a>
+    </li>
+    <li *ngIf="isLoggedIn" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400">
+      <a (click)="logout()">LOGOUT</a>
+    </li>
+  </ul>
 </nav>
