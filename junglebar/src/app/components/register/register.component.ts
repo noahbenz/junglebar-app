@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; // Importiere das Router-Modul
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule, RouterModule, HttpClientModule],
+  imports: [FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   providers: [UserService]

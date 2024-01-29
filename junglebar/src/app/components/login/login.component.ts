@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, RouterModule, HttpClientModule],
+  imports: [FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   providers: [UserService]
