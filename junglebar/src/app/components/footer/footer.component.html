@@ -5,7 +5,7 @@
         <h4>company</h4>
         <ul>
           <li><a href="#">START</a></li>
-          <li><a href="#">IMPRESSUM</a></li>
+          <li> <a (click)="openImpressumModal()">Impressum</a> </li>
         </ul>
       </div>
       <div class="footer-col">
@@ -40,3 +40,7 @@
   </div>
   <a class="company-ad" href="https://webtree.ch" target="_blank">© WebTree - All rights reserved</a>
 </footer>
+<app-impressum
+  *ngIf="isImpressumModalOpen"
+  (closeModalEvent)="closeImpressumModal()">
+</app-impressum>
