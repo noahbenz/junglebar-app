@@ -2,44 +2,45 @@
   <div class="container">
     <div class="row">
       <div class="footer-col">
-        <h4>company</h4>
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">company</h4>
         <ul>
-          <li><a href="#">START</a></li>
-          <li><a href="#">IMPRESSUM</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="#">START</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500"> <a (click)="openImpressumModal()">Impressum</a> </li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Follow us</h4>
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Links</h4>
         <ul>
-          <div class="social-links">
-            <a href="#"><a class="noah" href="https://www.linkedin.com/in/noah-benz-59b702270/" target="_blank"></a></a>
-            <a href="#"><a class="jann" href="https://www.linkedin.com/in/jann-fanzun-a5b5191a2/" target="_blank"></a></a>
-            <a href="#"><a class="silvan" href=""></a></a>
-            <a href="#"><a class="elias" href="https://www.linkedin.com/in/elias-blau-7bb749216/" target="_blank"></a></a>
-            <a href="#"><a class="valentin" href=""></a></a>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="#">Home</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500"><a href="/drinks">Drinks</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Book</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="700"><a href="/profile">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Contact</h4>
+        <ul>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="https://maps.app.goo.gl/Z4JSVn8L4ndS6yUEA" target="_blank">our location!</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500"><a href="tel: +41 44 446 96 00">Call us!</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Follow us</h4>
+        <ul>
+          <div class="social-links" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400">
+          <a class="noah" href="https://www.linkedin.com/in/noah-benz-59b702270/" target="_blank"></a>
+          <a class="jann" href="https://www.linkedin.com/in/jann-fanzun-a5b5191a2/" target="_blank"></a>
+          <a class="silvan" href=""></a>
+          <a class="elias" href="https://www.linkedin.com/in/elias-blau-7bb749216/" target="_blank"></a>
+          <a class="valentin" href=""></a>
           </div>
-          
         </ul>
-      </div>
-      <div class="footer-col">
-        <h4>online shop</h4>
-        <ul>
-          <li><a href="#">watch</a></li>
-          <li><a href="#">bag</a></li>
-          <li><a href="#">shoes</a></li>
-          <li><a href="#">dress</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>follow us</h4>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
       </div>
     </div>
   </div>
   <a class="company-ad" href="https://webtree.ch" target="_blank">© WebTree - All rights reserved</a>
 </footer>
+<app-impressum
+  *ngIf="isImpressumModalOpen"
+  (closeModalEvent)="closeImpressumModal()">
+</app-impressum>
