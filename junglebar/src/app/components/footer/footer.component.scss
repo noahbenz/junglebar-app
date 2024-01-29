@@ -77,6 +77,21 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
+.company-ad {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  text-decoration: none;
+  color: #bbbbbb;
+  transition: 0.3s;
+
+  &:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+}
+
 
 /*responsive*/
 @media(max-width: 767px){
