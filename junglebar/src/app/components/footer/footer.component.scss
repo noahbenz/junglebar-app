@@ -62,20 +62,40 @@ ul{
 
 }
 .footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(255,255,255,0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer-col .social-links .noah {
+  background-image: url('../../../assets/img/team/Noah.png');
+}
+
+.footer-col .social-links .jann {
+  background-image: url('../../../assets/img/team/Jann.png');
+}
+
+.footer-col .social-links .silvan {
+  background-image: url('../../../assets/img/team/Silvan.png');
+}
+
+.footer-col .social-links .elias {
+  background-image: url('../../../assets/img/team/Elias.png');
+}
+
+.footer-col .social-links .valentin {
+  background-image: url('../../../assets/img/team/Valentin.png');
 }
 .footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+  transform: scale(1.05);
+  cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
 }
 .company-ad {
   display: flex;
