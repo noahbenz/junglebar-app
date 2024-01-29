@@ -36,6 +36,7 @@
   cursor: pointer;
   margin-bottom: 40px; 
   overflow: hidden;
+  cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
 }
 
 .flip-card-inner {
@@ -113,6 +114,7 @@
   right: 0;
   bottom: 0;
   backface-visibility: hidden;
+  cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
 }
 
 @media (max-width: 730px) {
