@@ -1,68 +1,46 @@
-<footer>
-    <section id="side1">
-      <h3>Side 1</h3>
-      <ol>
-        <li>Down to the Wire</li>
-        <li>Burned</li>
-        <li>Mr. Soul</li>
-        <li>Broken Arrow</li>
-        <li>Expecting to Fly</li>
-        <li>Sugar Mountain</li>
-      </ol>
-    </section>
-    <section id="side2">
-      <h3>Side 2</h3>
-      <ol>
-        <li>I Am a Child</li>
-        <li>The Loner</li>
-        <li>The Old Laughing Lady</li>
-        <li>Cinnamon Girl</li>
-        <li>Down by the River</li>
-      </ol>
-    </section>
-    <section id="side3">
-      <h3>Side 3</h3>
-      <ol>
-        <li>Cowgirl in the Sand</li>
-        <li>I Believe in You</li>
-        <li>After the Gold Rush</li>
-        <li>Southern Man</li>
-        <li>Helpless</li>
-      </ol>
-    </section>
-    <section id="side4">
-      <h3>Side 4</h3>
-      <ol>
-        <li>Ohio</li>
-        <li>Soldier</li>
-        <li>Old Man</li>
-        <li>A Man Needs a Maid</li>
-        <li>Harvest</li>
-        <li>Heart of Gold</li>
-        <li>Star of Bethlehem</li>
-      </ol>
-    </section>
-    <section id="side5">
-      <h3>Side 5</h3>
-      <ol>
-        <li>The Needle and the Damage Done</li>
-        <li>Tonight’s the Night (Part&nbsp;1)</li>
-        <li>Tired Eyes</li>
-        <li>Walk On</li>
-        <li>For the Turnstiles</li>
-        <li>Winterlong</li>
-        <li>Deep Forbidden Lake</li>
-      </ol>
-    </section>
-    <section id="side6">
-      <h3>Side 6</h3>
-      <ol>
-        <li>Like a Hurricane</li>
-        <li>Love Is a Rose</li>
-        <li>Cortez the Killer</li>
-        <li>Campaigner</li>
-        <li>Long May You Run</li>
-      </ol>
-    </section>
-  </footer>
-  
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">company</h4>
+        <ul>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="#">START</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500"> <a (click)="openImpressumModal()">Impressum</a> </li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Links</h4>
+        <ul>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="#">Home</a></li>
+          <li data-aos="fade-right"  data-aos-duration="1000" data-aos-delay="500"><a href="/drinks">Drinks</a></li>
+          <li data-aos="fade-right"  data-aos-duration="1000" data-aos-delay="600"><a href="#contact">Book</a></li>
+          <li data-aos="fade-right"  data-aos-duration="1000" data-aos-delay="700"><a href="/profile">Profile</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Contact</h4>
+        <ul>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400"><a href="https://maps.app.goo.gl/Z4JSVn8L4ndS6yUEA" target="_blank">our location!</a></li>
+          <li data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="500"><a href="tel: +41 44 446 96 00">Call us!</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="200">Follow us</h4>
+        <ul>
+          <div class="social-links" data-aos="fade-right" data-aos-offset="200" data-aos-duration="1000" data-aos-delay="400">
+          <a class="noah" href="https://www.linkedin.com/in/noah-benz-59b702270/" target="_blank"></a>
+          <a class="jann" href="https://www.linkedin.com/in/jann-fanzun-a5b5191a2/" target="_blank"></a>
+          <a class="silvan" href=""></a>
+          <a class="elias" href="https://www.linkedin.com/in/elias-blau-7bb749216/" target="_blank"></a>
+          <a class="valentin" href=""></a>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a class="company-ad" href="https://webtree.ch" target="_blank">© WebTree - All rights reserved</a>
+</footer>
+<app-impressum
+  *ngIf="isImpressumModalOpen"
+  (closeModalEvent)="closeImpressumModal()">
+</app-impressum>

@@ -1,0 +1,68 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  height: 80%;
+  overflow-y: auto;
+
+  a {
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+      position: absolute;
+      top: 10%;
+      right: 5%;
+  }
+
+  img {
+      width: 20px;
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+  }
+}
+
+.impressum-container {
+  display: flex;
+}
+
+.left-section {
+  flex: 1;
+  padding: 30px;
+}
+
+.right-section {
+  flex: 2;
+  overflow-y: auto;
+  padding: 30px;
+}
+
+.right-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-section ul li {
+  margin-bottom: 10px;
+}
+
+.right-section p {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .impressum-container {
+      flex-direction: column;
+  }
+}
