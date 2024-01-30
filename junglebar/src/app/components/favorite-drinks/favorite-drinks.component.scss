@@ -20,7 +20,7 @@
     overflow-y: auto;
  
     a {
-        cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
       position: absolute;
       top: 10%;
       right: 10%;
@@ -28,6 +28,7 @@
   
     .x-icon {
       width: 20px;
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
     }
   }
   .favorite-drinks {
