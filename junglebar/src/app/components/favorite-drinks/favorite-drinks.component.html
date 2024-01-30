@@ -1,9 +1,10 @@
 <div class="modal-overlay">
   <div class="modal-content">
+    <h2>Favorite Drinks</h2>
     <a (click)="closeModal()">
       <img src="../../../assets/svg/x-icon.svg" class="x-icon" alt="">
     </a>
-    <h2>Favorite Drinks</h2>
+    <div class="content">
     <div class="favorite-drinks-container">
       <div *ngFor="let drink of favoriteDrinks" class="favorite-drink">
         <img [src]="drink.isFavorited ? '../../../assets/icons/star-icon-filled.svg' : '../../../assets/icons/star-icon.svg'" alt="" class="favorite-icon" (click)="toggleFavorite(drink)">
