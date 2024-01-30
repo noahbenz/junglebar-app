@@ -53,5 +53,26 @@ export class DrinksComponent implements OnInit {
   }
   toggleFavorite(drink: any) {
     drink.isFavorited = !drink.isFavorited;
+  
+    // Hole zuerst die gespeicherten Favoriten aus dem Local Storage
+    let favorites: any[] = JSON.parse(localStorage.getItem('favorites') || '[]');
+  
+    // Überprüfe, ob der Drink bereits in den Favoriten ist
+    const index = favorites.findIndex((favDrink) => favDrink.name === drink.name);
+  
+    if (drink.isFavorited) {
+      // Wenn der Drink nicht in den Favoriten ist, füge ihn hinzu
+      if (index === -1) {
+        favorites.push(drink);
+      }
+    } else {
+      // Wenn der Drink in den Favoriten ist, entferne ihn
+      if (index !== -1) {
+        favorites.splice(index, 1);
+      }
+    }
+  
+    localStorage.setItem('favorites', JSON.stringify(favorites));
   }
+  
 }
