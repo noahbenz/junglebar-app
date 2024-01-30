@@ -4,22 +4,22 @@
         <img class="responsive" src="../../../assets/svg/register-banner-responsive.svg" alt="" preload="auto">
         <img class="ipad" src="../../../assets/svg/register-banner-ipad.svg" alt="" preload="auto">
         
-        <div class="login-form">
+        <form [formGroup]="registerForm" class="login-form">
             <h3>Create a key to the Wild</h3>
-            
-            <label for="username">User Name</label>
-            <input type="text" id="name" name="name" [(ngModel)]="signupObj.name" aria-required="true">
-            
+        
+            <label for="name">User Name</label>
+            <input type="text" id="name" name="name" formControlName="name" aria-required="true">
+        
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" formControlName="email" [(ngModel)]="signupObj.email" aria-required="true">
-            
+            <input type="email" id="email" name="email" formControlName="email" aria-required="true" />
+        
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" [(ngModel)]="signupObj.password" aria-required="true">
-            
+            <input type="password" id="password" name="password" formControlName="password" aria-required="true">
+        
             <div class="button-container">
                 <button (click)="onSignUp()" type="button">Create</button>
                 <a class="register-link" routerLink="/login">Sign in</a>
             </div>
-        </div>        
+        </form>              
     </div>
 </div>
