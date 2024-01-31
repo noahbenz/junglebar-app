@@ -4,13 +4,18 @@
 </label>
 <div class="background">&nbsp;</div>
 
-<!-- nav -->
 <nav class="nav">
   <ul class="list">
     <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a></li>
     <li><a routerLink="/drinks" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">DRINKS</a></li>
-    <li><a routerLink="/book" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">BOOK</a></li>
-    <li><a routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">PROFILE</a></li>
-    <li><a routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">LOGIN</a></li>
+    <li>
+      <a href="#contact">BOOK</a>
+    </li>    
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a *ngIf="isLoggedIn" routerLink="/profile">PROFILE</a>
+      <a *ngIf="!isLoggedIn" (click)="showLoginAlert()">PROFILE</a>
+    </li>    
+    <li *ngIf="!isLoggedIn"><a routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" routerLink="/login">LOGIN</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">LOGOUT</a></li>  
   </ul>
 </nav>

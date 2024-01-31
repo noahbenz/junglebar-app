@@ -1,29 +1,39 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';  
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
+import { UserService } from '../../services/user.service';
+import { HttpClientModule } from '@angular/common/http';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule, HttpClientModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'] 
+  styleUrls: ['./login.component.scss'],
+  providers: [UserService]
 })
+
 export class LoginComponent {
-  loginObj: any = {
-    email: '',
-    password: ''
-  };
+  email: string = '';
+  password: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  public onLogin() {
-    const isUserExist = this.authService.login(this.loginObj.email, this.loginObj.password);
-    if(isUserExist) {
-      alert('User Login succeeded');
-    } else {
-      alert('Wrong Credentials');
-    }
+  login() {
+    this.userService.getUserByEmailAndPassword(this.email, this.password)
+      .subscribe(
+        (user) => {
+          localStorage.setItem('loggedIn', 'true');
+          localStorage.setItem('username', user.name);
+          localStorage.setItem('email', user.email);
+          
+          this.router.navigate(['/']);
+          swal('Login successful!');
+        },
+        (error) => {
+          swal('Login failed. Please check your credentials and try again.');
+        }
+      );
   }
 }
