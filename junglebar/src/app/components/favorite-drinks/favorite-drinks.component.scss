@@ -32,16 +32,16 @@
     }
 
     h2{
-      color: var(--green);
+      color: var(--black);
       text-transform: capitalize;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       position: relative;
     }
     h2::before{
       content: '';
       position: absolute;
       left:0;
-      bottom: -10px;
+      bottom: 0px;
       background-color: var(--yellow);
       height: 6px;
       box-sizing: border-box;
@@ -50,9 +50,25 @@
   }
   
   .content {
-    width: 90%;
-    max-height: calc(100% - 60px);
+    width: 100%;
+    max-height: calc(100% - 150px);
     overflow-y: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 8px;
+  }
+  
+  .content::-webkit-scrollbar-track {
+    background-color: var(--green);
+    border-radius: 8px;
   }
   
   .favorite-drinks-container {
@@ -72,7 +88,7 @@
     min-width: 290px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.322);
+    background-color: var(--green);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 38px;
