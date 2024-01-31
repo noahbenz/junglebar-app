@@ -96,7 +96,7 @@
                 transition: 0.4s ease-out;
                 &:hover{
                     transition: 0.4s ease;
-                    color: #796000;
+                    color: var(--hover-brown);
                       cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
                     } 
             }
@@ -108,7 +108,7 @@
                 transition: 0.4s ease-out;
                 &:hover{
                     transition: 0.4s ease;
-                    color: #796000;
+                    color: var(--hover-brown);
                       cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
                     } 
                 @media(max-width: 650px) {
