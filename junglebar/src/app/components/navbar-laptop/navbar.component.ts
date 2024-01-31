@@ -2,6 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterLinkActive, RouterModule } from '@angular/router';
 import AOS from 'aos';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-navbar',
@@ -25,9 +26,10 @@ export class NavbarComponent {
     localStorage.removeItem('email');
     this.isLoggedIn = false;
     this.router.navigate(['/login']);
+    swal('Logout successful!');
   }
 
   showLoginAlert() {
-    alert('Please log in to access your profile.');
+    swal('Please log in to access your profile.');
   }
 }

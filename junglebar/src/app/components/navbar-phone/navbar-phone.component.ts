@@ -2,6 +2,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterLinkActive, RouterModule } from '@angular/router';
 import AOS from 'aos';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -41,6 +42,6 @@ export class NavbarPhoneComponent {
   }
 
   showLoginAlert() {
-    alert('Please log in to access your profile.');
+    swal('Please log in to access your profile.');
   }
 }

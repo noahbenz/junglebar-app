@@ -3,6 +3,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-login',
@@ -28,9 +29,10 @@ export class LoginComponent {
           localStorage.setItem('email', user.email);
           
           this.router.navigate(['/']);
+          swal('Login successful!');
         },
         (error) => {
-          alert('Login failed. Please check your credentials and try again.');
+          swal('Login failed. Please check your credentials and try again.');
         }
       );
   }

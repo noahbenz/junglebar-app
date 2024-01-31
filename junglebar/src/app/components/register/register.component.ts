@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user.model';
 import { HttpClientModule } from '@angular/common/http';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-register',
@@ -29,18 +30,18 @@ export class RegisterComponent implements OnInit {
 
   onSignUp(): void {
     if (this.registerForm.invalid) {
-      alert("something is wrong!")
+      swal("something is wrong!")
       return;
     }
 
     this.userService.registerUser(this.registerForm.value).subscribe(
       () => {
-        alert('Registrierung erfolgreich!');
+        swal('Registrierung erfolgreich!');
         this.router.navigate(['/login']);
       },
       (error) => {
         console.error('Fehler bei der Registrierung:', error);
-        alert('Etwas ist schiefgelaufen!');
+        swal('Etwas ist schiefgelaufen!');
       }
     );
   }
