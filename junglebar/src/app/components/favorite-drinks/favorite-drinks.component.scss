@@ -13,21 +13,106 @@
   
   .modal-content {
     background-color: var(--white);
-    padding: 20px;
+    padding: 30px;
     border-radius: 15px;
-    width: 80%;
+    width: 90%;
     height: 80%;
-    overflow-y: auto;
+    overflow-y: hidden;
  
     a {
-        cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
       position: absolute;
       top: 10%;
-      right: 10%;
+      right: 5%;
     }
   
-    img {
+    .x-icon {
       width: 20px;
+      cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+    }
+
+    h2{
+      color: var(--black);
+      text-transform: capitalize;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    h2::before{
+      content: '';
+      position: absolute;
+      left:0;
+      bottom: 0px;
+      background-color: var(--yellow);
+      height: 6px;
+      box-sizing: border-box;
+      width: 100px;
     }
   }
+  
+  .content {
+    width: 100%;
+    max-height: calc(100% - 150px);
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .content::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .content::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 8px;
+  }
+  
+  .content::-webkit-scrollbar-track {
+    background-color: var(--green);
+    border-radius: 8px;
+  }
+  
+  .favorite-drinks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 100px;
+    width: fit-content;
+    max-width: 1300px;
+  }
+  
+  .favorite-drink {
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    max-width: 290px;
+    min-width: 290px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: var(--green);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 38px;
+    filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+    color: var(--white);
+  }
+  
+  .drink-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .favorite-drink h3 {
+    margin: 15px auto 15px;
+  }
+  
+  .favorite-icon {
+    width: 24px;
+    position: absolute;
+    top : 8px;
+    left: 8px;
+    font-size: 34px;
+    cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+}
   
