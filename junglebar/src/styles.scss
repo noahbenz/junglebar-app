@@ -6,6 +6,8 @@
     --green: #30483A;
     --black: #0b1215;
     --white: #eeeeee;
+    --grey: #bbbbbb;
+    --hover-brown: #796000;
 }
 
 html {
@@ -59,6 +61,30 @@ p {
 
 span {
     border-bottom: 6px solid var(--yellow) !important;
+}
+
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.swal-modal {
+    background-color: var(--white);
+    border: 3px solid var(--white);
+}
+
+.swal-text {
+    color: var(--black);
+}
+
+.swal-button {
+    background-color: var(--green) !important;
+    border: 1px solid var(--green);
+    cursor: url(assets/svg/cursor-pointer.svg), auto !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.swal-button:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 1150px) {
