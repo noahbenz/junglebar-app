@@ -39,12 +39,46 @@
 .left-section {
   flex: 1;
   padding: 30px;
+
+  h2 {
+    color: var(--black);
+  }
 }
 
 .right-section {
   flex: 2;
   overflow-y: auto;
   padding: 30px;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background-color: var(--green);
+  border-radius: 8px;
+}
+
+.right-section h3{
+	color: var(--black);
+	text-transform: capitalize;
+	position: relative;
+}
+.right-section h3::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -5px;
+	background-color: var(--yellow);
+	height: 6px;
+	box-sizing: border-box;
+	width: 50px;
 }
 
 .right-section ul {
@@ -55,6 +89,11 @@
 
 .right-section ul li {
   margin-bottom: 10px;
+  color: var(--green);
+
+  h4 {
+    color: var(--black);
+  }
 }
 
 .right-section p {

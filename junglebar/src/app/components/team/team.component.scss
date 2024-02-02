@@ -1,6 +1,5 @@
 .team-section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 50px;
   align-items: center;
   flex-direction: column;
 }
@@ -44,7 +43,7 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -80,8 +79,6 @@
   object-fit: cover; 
 }
 
-
-
 .flip-card-front h3 {
   margin: 0;
   color: var(--yellow);
@@ -89,15 +86,13 @@
   white-space: nowrap; 
 }
 
-
 .flip-card-front p {
   margin: 0;
+  color: var(--white);
 }
-
 
 .flip-card-back {
   background-color: var(--green);
-  color: var(--yellow);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -115,6 +110,14 @@
   bottom: 0;
   backface-visibility: hidden;
   cursor: url(../../../assets/svg/cursor-pointer.svg), auto !important;
+
+  p {
+    color: var(--white);
+  }
+
+  h3 {
+    color: var(--yellow);
+  }
 }
 
 @media (max-width: 730px) {
