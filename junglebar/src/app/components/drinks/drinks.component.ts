@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { ArrowUpComponent } from '../arrow-up/arrow-up.component';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -52,21 +53,23 @@ export class DrinksComponent implements OnInit {
     
   }
   toggleFavorite(drink: any) {
+    const isLoggedIn = localStorage.getItem('loggedIn') === 'true';
+    if (!isLoggedIn) {
+      swal('Please login to access this feature!');
+      return;
+    }
+  
     drink.isFavorited = !drink.isFavorited;
   
-    // Hole zuerst die gespeicherten Favoriten aus dem Local Storage
     let favoriteDrinks: any[] = JSON.parse(localStorage.getItem('favoriteDrinks') || '[]');
   
-    // Überprüfe, ob der Drink bereits in den Favoriten ist
     const index = favoriteDrinks.findIndex((favDrink) => favDrink.name === drink.name);
   
     if (drink.isFavorited) {
-      // Wenn der Drink nicht in den Favoriten ist, füge ihn hinzu
       if (index === -1) {
         favoriteDrinks.push(drink);
       }
     } else {
-      // Wenn der Drink in den Favoriten ist, entferne ihn
       if (index !== -1) {
         favoriteDrinks.splice(index, 1);
       }
@@ -74,5 +77,4 @@ export class DrinksComponent implements OnInit {
   
     localStorage.setItem('favoriteDrinks', JSON.stringify(favoriteDrinks));
   }
-  
 }
