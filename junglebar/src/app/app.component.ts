@@ -18,8 +18,4 @@ import AboutUsComponent from './components/about-us/about-us.component';
 })
 export class AppComponent {
   title = 'junglebar';
-
-  constructor() {
-    localStorage.setItem('loggedIn', 'false');
-  }
 }
