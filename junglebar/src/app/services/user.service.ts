@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:5163/api/user';
+  private apiUrl = 'https://junglebar-api.netlify.app/api/user';
 
   constructor(private http: HttpClient) { }
 
